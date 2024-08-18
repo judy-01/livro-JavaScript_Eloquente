@@ -1,3 +1,4 @@
+//Definição de estradas
 const roads = [
     "Alice's House-Bob's House",   "Alice's House-Cabin",
     "Alice's House-Post Office",   "Bob's House-Town Hall",
@@ -8,6 +9,7 @@ const roads = [
     "Marketplace-Town Hall",       "Shop-Town Hall"
   ];
 
+// Esta função cria um grafo que representa as conexões entre os lugares
 function buildGraph(edges) {
     let graph = Object.create(null);
     function addEdge(from, to) {
@@ -26,7 +28,7 @@ function buildGraph(edges) {
   
 const roadGraph = buildGraph(roads);
 
-
+// Classe que representa o status da vila em um dado momento
 class VillageState {
     constructor(place, parcels) {
       this.place = place;
@@ -46,22 +48,22 @@ class VillageState {
     }
   }
 
+// Exemplo de uso
 let first = new VillageState(
     "Post Office",
     [{place: "Post Office", address: "Alice's House"}]
     );
-let next = first.move("Alice's House");
-      
+let next = first.move("Alice's House");   
 console.log(next.place);
-      // → Alice's House
-console.log(next.parcels);
-      // → []
+console.log(next.parcels); 
 console.log(first.place);
-      // → Post Office
+  
+// Imutabilidade
 let object = Object.freeze({value: 5});
 object.value = 10;
 console.log(object.value);
 
+//  função executa o robô em um loop, fazendo com que ele continue se movendo até que todos os pacotes sejam entregues
 function runRobot(state, robot, memory) {
     for (let turn = 0;; turn++) {
       if (state.parcels.length == 0) {
@@ -75,6 +77,7 @@ function runRobot(state, robot, memory) {
     }
   }
 
+  // Aqui, o robô escolhe um movimento aleatório para realizar, escolhendo uma direção aleatória dentre as disponíveis no local atua
   function randomPick(array) {
     let choice = Math.floor(Math.random() * array.length);
     return array[choice];
@@ -84,7 +87,7 @@ function runRobot(state, robot, memory) {
     return {direction: randomPick(roadGraph[state.place])};
   }
 
-
+//Essa função cria um estado inicial aleatório da vila com um número especificado de pacotes
   VillageState.random = function(parcelCount = 5) {
     let parcels = [];
     for (let i = 0; i < parcelCount; i++) {
