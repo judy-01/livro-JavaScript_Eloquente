@@ -1,9 +1,5 @@
 
-const fs = require('fs');
 const  JOURNAL = require('./journal')
-  // This makes sure the data is exported in node.js —
-  // `require('./path/to/journal.js')` will get you the array.
-
 
   function tableFor(event, journal) {
     let table = [0, 0, 0, 0];
