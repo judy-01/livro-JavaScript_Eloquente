@@ -1,29 +1,30 @@
-// AND
-console.log(true && false)
-console.log(false & true)
+// AND - retorna true se ambos forem true, caso contrario , retorna false
+console.log(true && false) // false
+console.log(false & true) // false 
 
-// OR 
-console.log(false || true)
-console.log(false || false)
+// OR - retorna true se pelo menos um dos operadores for true
+console.log(false || true) // true
+console.log(false || false) // false
 
-// NOT
-console.log(! true)
-console.log(! false )
+// NOT - inverte o valor booleano
+console.log(! true) // false
+console.log(! false ) // true
 
-// TERNARIO
-console.log( true ? 1: 5)
-console.log( false ? 1 :3)
+// TERNARIO - retorna valor , baseado em uma condição
+console.log( true ? 1: 5) //1
+console.log( false ? 1 :3) //3
 
-//NAN
-console.log(NaN== NaN)
-console.log(NaN != NaN)
+//NAN - sempre retorna false
+console.log(NaN== NaN) // false 
+console.log(NaN != NaN) //false
 
-//NULL 
-console.log(null == null)
-console.log(null != null)
+//NULL - representa a ausência de valor
+console.log(null == null) // true
+console.log(null != null)// false
 
-//UNDEFINED
+//UNDEFINED - indica que uma variavél foi declada mas ainda não foi atribuida algum valor
 console.log(null == undefined)
 console.log( undefined != undefined)
 
+// Coalescência Nula - retorna o operando do lado direito quando o lado esquerdo é null ou underfined
 console.log( 1 ?? 6)

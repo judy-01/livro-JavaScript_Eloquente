@@ -1,0 +1,15 @@
+
+console.log(grey)
+var grey ='cinza'
+
+ GREY É ELEVADA AO TOPO , MAS SUA ATRIBUIÇÃO 
+ OCORRE DEPOIS DO CONSOLE.LOG, POR ISSO 
+EXIBE 'UNDERFINED, ANTES QUE A VARIAVEL RECEBA O VALOR 'CINZA'
+
+
+let para variáveis cujo valor pode mudar ao longo do código, mas que precisam ser limitadas ao escopo de bloco.
+
+const para variáveis cujo valor não deve mudar, garantindo que você não reatribua a variável acidentalmente.
+
+Evitar var, exceto em situações muito específicas onde o comportamento de var seja necessário 
+
