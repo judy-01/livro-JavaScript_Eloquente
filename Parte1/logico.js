@@ -1,6 +1,6 @@
 // AND - retorna true se ambos forem true, caso contrario , retorna false
 console.log(true && false) // false
-console.log(false & true) // false 
+console.log(false & true) // 0
 
 // OR - retorna true se pelo menos um dos operadores for true
 console.log(false || true) // true
