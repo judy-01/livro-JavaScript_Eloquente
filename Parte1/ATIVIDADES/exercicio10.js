@@ -1,5 +1,5 @@
 function deepEqual(a, b) {
-    // Se os valores são estritamente iguais, retorne true
+    
     if (a === b) return true;
     
     // Verifica se algum dos valores é null ou se não são objetos
@@ -29,9 +29,9 @@ function deepEqual(a, b) {
   let obj = { here: { is: "an" }, object: 2 };
   
   console.log(deepEqual(obj, obj));
-  // → true
+  
   console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
-  // → true
+  
   console.log(deepEqual(obj, { here: { is: "another" }, object: 2 }));
-  // → false
+  
   
