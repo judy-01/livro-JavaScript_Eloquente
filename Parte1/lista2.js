@@ -1,4 +1,4 @@
-// Inicializa a lista de tarefas
+
 let todoList = [];
 
 // Função para adicionar uma tarefa ao final da lista
@@ -16,26 +16,23 @@ function rememberUrgently(task) {
   todoList.unshift(task);
 }
 
-// Adicionando algumas tarefas
-remember("Comprar leite");
+//  tarefas
+remember("Comprar livros");
 remember("Estudar JavaScript");
-rememberUrgently("Pagar contas");
+rememberUrgently("Pagar faculdade");
 
-// Exibindo a lista de tarefas atual
-console.log(todoList); 
-// → ["Pagar contas", "Comprar leite", "Estudar JavaScript"]
+console.log(`Nova lista\n[${todoList}]`); 
+console.log('-'.repeat(60))
+console.log(`Remove e exibe a primeira tarefa\n[${getTask()}]`); 
+console.log('-'.repeat(60))
 
-// Removendo e exibindo a primeira tarefa
-console.log(getTask()); 
-// → "Pagar contas"
+console.log(`Lista após remover a primeira tarefa\n[${todoList}]`); 
 
-// Exibindo a lista de tarefas após remover a primeira tarefa
-console.log(todoList); 
-// → ["Comprar leite", "Estudar JavaScript"]
 
-// Adicionando uma tarefa urgente
-rememberUrgently("Ligar para o médico");
+console.log('-'.repeat(60))
+console.log(`Adicionando outra tarefa...\n`)
+rememberUrgently("Ligar para o CAPs");
 
-// Exibindo a lista de tarefas atualizada
-console.log(todoList); 
-// → ["Ligar para o médico", "Comprar leite", "Estudar JavaScript"]
+
+console.log('-'.repeat(60))
+console.log(`Lista atualizada\n[${todoList}]`); 
